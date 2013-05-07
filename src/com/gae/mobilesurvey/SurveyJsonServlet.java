@@ -17,18 +17,18 @@ import com.google.appengine.labs.repackaged.org.json.JSONObject;
 public class SurveyJsonServlet extends HttpServlet{
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) 
 			throws IOException{
-		//获取调查问卷列表
+		//鑾峰彇璋冩煡闂嵎鍒楄〃
 		List<Survey> listSurveys = new ArrayList<Survey>();
 		listSurveys = SurveyDao.INSTANCE.listSurveys();
 		
-		//获取问卷名称
+		//鑾峰彇闂嵎鍚嶇О
 		String[][] surveyJson = new String[listSurveys.size()][2];
 		for(int i=0; i<listSurveys.size(); i++) {
 			surveyJson[listSurveys.size()-1-i][0] = listSurveys.get(i).getId() + "-+" + listSurveys.get(i).getTitle() + "/" + listSurveys.get(i).getDateCreated();
 			surveyJson[listSurveys.size()-1-i][1] = listSurveys.get(i).getNarrative();
 		}
 		
-		//将问卷名称以数组的形式存为JSON格式		
+		//灏嗛棶鍗峰悕绉颁互鏁扮粍鐨勫舰寮忓瓨涓篔SON鏍煎紡	
 		JSONObject surveyJsonObject = new JSONObject();
 		try {
 			surveyJsonObject.put("surveyJson", surveyJson);

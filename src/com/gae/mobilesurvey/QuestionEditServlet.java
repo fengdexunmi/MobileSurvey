@@ -10,6 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gae.mobilesurvey.dao.QuestionDao;
 
+/**
+ * 缂栬緫闂嵎棰樼洰锛屽寘鎷慨鏀归鐩爣棰樺拰閫夐」
+ * @author Frank
+ *
+ */
 @SuppressWarnings("serial")
 public class QuestionEditServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) 
@@ -30,7 +35,6 @@ public class QuestionEditServlet extends HttpServlet{
 		if(checkNull(option2)){
 			qOption.add(option2);
 		}
-		System.out.println("修改的题目："+qOption);
 		
 		boolean isUpdate = QuestionDao.INSTANCE
 				.updateQuestion(Long.valueOf(questionId), qTitle, qOption);

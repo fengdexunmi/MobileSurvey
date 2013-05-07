@@ -30,7 +30,7 @@ public class QuestionAddServlet extends HttpServlet{
 		if(checkNull(option2)){
 			qOption.add(option2);
 		}
-		System.out.println("��������Ŀ��"+qOption);
+		System.out.println("新增的问题"+qOption);
 		
 		if(QuestionDao.INSTANCE.addQuestion(Long.valueOf(surveyId),qTitle, qOption)) {
 			resp.sendRedirect("/questionnaire.jsp?surveyId=" + surveyId);
