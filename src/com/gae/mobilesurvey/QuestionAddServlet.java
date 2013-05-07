@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gae.mobilesurvey.dao.QuestionDao;
 
+/**éœ€è¦è§£å†³ä¸­æ–‡ä¹±ç çš„é—®é¢˜**/
 @SuppressWarnings("serial")
 public class QuestionAddServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) 
@@ -29,7 +30,7 @@ public class QuestionAddServlet extends HttpServlet{
 		if(checkNull(option2)){
 			qOption.add(option2);
 		}
-		System.out.println("ĞÂÔöµÄÌâÄ¿£º"+qOption);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½"+qOption);
 		
 		if(QuestionDao.INSTANCE.addQuestion(Long.valueOf(surveyId),qTitle, qOption)) {
 			resp.sendRedirect("/questionnaire.jsp?surveyId=" + surveyId);
