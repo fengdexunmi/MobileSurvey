@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>MobileSurvey</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.MobileSurveyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MobileSurvey</servlet-name>
+		<url-pattern>/mobilesurvey</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SurveyForm</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.SurveyFormServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SurveyForm</servlet-name>
+		<url-pattern>/surveyform</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SurveyJson</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.SurveyJsonServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SurveyJson</servlet-name>
+		<url-pattern>/surveyjson</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SurveyUpdate</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.SurveyUpdateServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SurveyUpdate</servlet-name>
+		<url-pattern>/surveyupdate</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>SurveyDelete</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.SurveyDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SurveyDelete</servlet-name>
+		<url-pattern>/surveydelete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>ResultsAnalysis</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.ResultsAnalysisServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ResultsAnalysis</servlet-name>
+		<url-pattern>/resultsanalysis</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuestionAdd</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.QuestionAddServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuestionAdd</servlet-name>
+		<url-pattern>/questionadd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuestionEdit</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.QuestionEditServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuestionEdit</servlet-name>
+		<url-pattern>/questionedit</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuestionDelete</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.QuestionDeleteServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuestionDelete</servlet-name>
+		<url-pattern>/questiondelete</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>Questionnaire</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.QuestionnaireServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Questionnaire</servlet-name>
+		<url-pattern>/questionnaire</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>QuestionList</servlet-name>
+		<servlet-class>com.gae.mobilesurvey.QuestionListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>QuestionList</servlet-name>
+		<url-pattern>/questionlist</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>surveylist.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
