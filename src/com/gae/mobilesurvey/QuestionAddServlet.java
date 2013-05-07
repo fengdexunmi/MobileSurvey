@@ -10,7 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gae.mobilesurvey.dao.QuestionDao;
 
-/**需要解决中文乱码的问题**/
+
+/**
+ * 添加问卷题目
+ * @author Frank
+ *
+ */
 @SuppressWarnings("serial")
 public class QuestionAddServlet extends HttpServlet{
 	public void doPost(HttpServletRequest req, HttpServletResponse resp) 
