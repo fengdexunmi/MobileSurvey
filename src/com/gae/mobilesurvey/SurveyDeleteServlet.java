@@ -8,6 +8,10 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.gae.mobilesurvey.dao.SurveyDao;
 
+/**
+ * 删除问卷调查
+ * 
+ **/
 @SuppressWarnings("serial")
 public class SurveyDeleteServlet extends HttpServlet{
 	public void doGet(HttpServletRequest req, HttpServletResponse resp) 
